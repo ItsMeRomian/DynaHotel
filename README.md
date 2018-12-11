@@ -3,7 +3,13 @@ Note: This theme is made for a screenwidth of 1366 pixels. Some images might dis
 
 This theme is mostly in Dutch and does not use the predefined strings found in the language folder of Brain. The theme is also based on PlusEMU's database structure.
 
-preview:
+## What to change / How to install
+1. In staff.php, change itsmeromian, kazoo etc. to staff users of your own hotel. 
+2. wip
+
+## Previews:
+
+me page:
 ![alt text](https://i.imgur.com/gd2jxBn.png)
 
 home page:
