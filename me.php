@@ -2,16 +2,16 @@
 $rand = rand(0,3);
 switch($rand) {
 	case 0:
-		$welcome = "Leuk je weer te zien {username}!";
+		$welcome = "Nice to see you again, {username}!";
 		break;
 	case 1:
-		$welcome = "Welkom terug {username}!";
+		$welcome = "Welcome back, {username}!";
 		break;
 	case 2:
-		$welcome = "Welkom, {username}!";
+		$welcome = "Welcome, {username}!";
 		break;
 	case 3:
-		$welcome = "Goed je weer te zien, {username}!";
+		$welcome = "Good to see you, {username}!";
 		break;
 }
 ?>
@@ -19,13 +19,13 @@ switch($rand) {
 		<div class="col">
 			<div class="userview">
 				<div class="user">
-					<img src="https://retroripper.com/habbo-imaging/avatarimage?figure={look}&direction=2&head_direction=3&action=std,wav&gesture=std">
+					<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?figure={look}&direction=2&head_direction=3&action=std,wav&gesture=std">
 				</div>
 				<div class="usertext">
 					<span class="title text-capitalize"><?=$welcome?></span><br>
 					<span class="font-italic">"{motto}"</span>
 					<br><br>
-					<button type="button" class="btn btn-success"><a class="link"href="client" target="_BLANK">GA NAAR DYNA »</a></button>
+					<button type="button" class="btn btn-success"><a class="link"href="client" target="_BLANK">GO TO DYNA »</a></button>
 				</div>
 				<div class="userinfo text-right">
 					<span class="text-capitalize">{credits} Credits</span> <img src="/templates/brain/style/images/icons/6.png"><br>
@@ -40,7 +40,7 @@ switch($rand) {
 			<div class="row">
 				<div class="pil text-justify">
 					<div class="pilhead" style="background-color: #56E39F;">
-						WELKOM IN DYNA
+						WELCOME TO DYNA
 					</div>
 					Here at {hotelname} Hotel, we are a small community hotel, just like Habbo but our coin currency is free! 
 					Along with friendly management that keep the hotel running smooth.
@@ -50,7 +50,7 @@ switch($rand) {
 					The community holds events and competitions to make it more of a fun place to hang out.
 					<br> 
 					<br>
-					<h5>MUNTEN OP DYNA</h5>
+					<h5>COINS IN DYNA</h5>
 					<img style="float: right; margin-left: 5px; margin-right: -5px;"src="/templates/DynaHotel/images/richcoins.png">
 					Je hebt 3 verschillende soorten munten op Dyna. <b><span style="color: gold;">CREDITS</span></b>,<b>  <span style="color: pink;">DUCKETS</span></b> en <b><span style="color: blue;">VIP POINTS</span></b>. Credits en Duckets verdien je door 
 					elke dag te spelen. Je krijgt ze door mee te doen aan games en ieder half uur krijg je een bepaalde hoeveelheid. <br>
@@ -62,7 +62,7 @@ switch($rand) {
 			<div class="row">
 				<div class="pil text-justify">
 					<div class="pilhead" style="background-color: #56E39F;">
-						NIEUWSTE ACCOUNTS
+						NEWEST ACCOUNTS
 					</div>
 					<?php
 					$getlastusers = $dbh->prepare("SELECT username,look,id FROM users ORDER BY ID DESC LIMIT 5");
@@ -73,7 +73,7 @@ switch($rand) {
 							<?php if ($friendinforow['online']) { ?>
 									<span style="color: green;">online</span>
 									<?php } else { ?><span style="color: red;">offline</span><?php } ?></span>
-							<img style="width: 80px;margin-top: -10px;" src="https://retroripper.com/habbo-imaging/avatarimage?figure=<?=$user['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">
+							<img style="width: 80px;margin-top: -10px;" src="https://www.habbo.com.br/habbo-imaging/avatarimage?figure=<?=$user['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">
 						</div>
 					
 					<?php } ?>
@@ -82,7 +82,7 @@ switch($rand) {
 			<div class="row">
 				<div class="pil text-justify">
 					<div class="pilhead" style="background-color: #56E39F;">
-						LAATSTE KAMERS GEMAAKT
+						LAST ROOMS MADE
 					</div>
 					<?php
 					$getlastrooms = $dbh->prepare("SELECT caption, model_name,owner, users_now FROM rooms ORDER BY ID DESC LIMIT 5");
@@ -94,7 +94,7 @@ switch($rand) {
 						?>
 						<div class="lastuser">
 							<span><?=$room['caption']?></span><br>
-							<span style="font-size: 13px;">Gemaakt door <br><a href="/home/<?=$room['owner']?>"><?=$owner['username']?></a><br></span>
+							<span style="font-size: 13px;">Made by <br><a href="/home/<?=$room['owner']?>"><?=$owner['username']?></a><br></span>
 							<img style="width: 80px;"src="/swf/c_images/newroom/<?=$room['model_name']?>.png">
 							<br><span style="font-size: 13px;"><?=$room['users_now']?> online now</span>
 						</div>
@@ -107,14 +107,14 @@ switch($rand) {
 			<div class="row">
 				<div class=" pil text-justify">
 					<div class="pilhead">
-						DYNA VAN DE WEEK
+						DYNA OF THE WEEK
 					</div>
 					<?=userOfTheWeek()?>
 				</div>
 			</div>
 			<div class="row">
 				<div class=" pil text-justify">
-					<div class="pilhead"> ADVERTENTIE </div>
+					<div class="pilhead"> AD </div>
 					<img src="https://via.placeholder.com/360x600?text=360x600">
 				</div>
 			</div>

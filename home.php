@@ -9,17 +9,17 @@ if (is_numeric(str_replace("/home/", "", parse_url($_SERVER["REQUEST_URI"], PHP_
 	<div class="col">
 		<div class="userview">
 			<div class="user">
-				<img src="https://retroripper.com/habbo-imaging/avatarimage?figure=<?=userHome('look')?>&direction=2&head_direction=3&action=std,wav&gesture=std">
+				<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?figure=<?=userHome('look')?>&direction=2&head_direction=3&action=std,wav&gesture=std">
 			</div>
 			<div class="usertext">
-				<span class="title text-capitalize">Hi! Ik ben <?=userHome('username')?></span>
+				<span class="title text-capitalize">Hi! I'm <?=userHome('username')?></span>
 				<?php 
 				if (userHome('rank') > 3) { ?>
 					<img src='/swf/c_images/album1584/ADM.gif' style="margin-top: -11px;"> 
 				<?php } ?>
 				<br>
 				<span class="font-italic">"<?=userHome('motto')?>"</span><br>
-				<span>Account sinds: <?=date("d-m-Y", userHome('account_created'))?>
+				<span>Account exists since: <?=date("d-m-Y", userHome('account_created'))?>
 			</div>
 			<div class="userinfo text-right">
 				<span class="text-capitalize"><?=userHome('credits')?> Credits</span> <img src="/templates/brain/style/images/icons/6.png"><br>
@@ -34,7 +34,7 @@ if (is_numeric(str_replace("/home/", "", parse_url($_SERVER["REQUEST_URI"], PHP_
 		<div class="row">
 			<div class="pil text-justify" style="height: 200px;">
 				<div class="pilhead" style="background-color: #FFA630;">
-					<h3>Kamers gemaakt door <?=userHome('username')?></h3>
+					<h3>Rooms by <?=userHome('username')?></h3>
 				</div>
 				<?php
 				$getlastrooms = $dbh->prepare("SELECT caption, model_name,owner, users_now FROM rooms WHERE owner = " . userHome('id') . " ORDER BY ID DESC LIMIT 5");
@@ -46,18 +46,18 @@ if (is_numeric(str_replace("/home/", "", parse_url($_SERVER["REQUEST_URI"], PHP_
 					?>
 					<div class="lastuser">
 						<span><?=$room['caption']?></span><br>
-						<span style="font-size: 13px;">Gemaakt door <?=$owner['username']?><br></span>
+						<span style="font-size: 13px;">By <?=$owner['username']?><br></span>
 						<img style="width: 80px;"src="/swf/c_images/newroom/<?=$room['model_name']?>.png">
 						<br><span style="font-size: 13px;"><?=$room['users_now']?> online now</span>
 					</div>
 				
-				<?php } ?>
+			<?php } ?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="pil text-justify" style="height: 200px;">
+			<div class="pil text-justify" >
 				<div class="pilhead" style="background-color: #FFA630;">
-					<h3>VRIENDEN VAN <?=userHome('username')?></h3>
+					<h3>FRIENDS OF <?=userHome('username')?></h3>
 				</div>
 				<?php
 				$getfriends = $dbh->prepare("SELECT user_two_id FROM messenger_friendships WHERE user_one_id = " . userHome('id') . " ORDER BY ID DESC LIMIT 5");
@@ -67,15 +67,19 @@ if (is_numeric(str_replace("/home/", "", parse_url($_SERVER["REQUEST_URI"], PHP_
 					$friendinfo->execute();
 					$friendinforow = $friendinfo->fetch();
 					?>
-					<div class="lastuser">
-							<span>
-								<a href="/home/<?=$friendinforow['id']?>"><?=$friendinforow['username']?></a><br>
-								<?php if ($friendinforow['online']) { ?>
-									<span style="color: green;">online</span>
-									<?php } else { ?><span style="color: red;">offline</span><?php } ?></span><br>
-									<img style="width: 80px;margin-top: -10px;" src="https://retroripper.com/habbo-imaging/avatarimage?figure=<?=$friendinforow['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">
-					</div>
-				
+				<div class="lastuser">
+					<span>
+						<a href="/home/<?=$friendinforow['id']?>"><?=$friendinforow['username']?></a>
+						<br>
+						<?php if ($friendinforow['online']) { ?>
+							<span style="color: green;">online</span>
+						<?php } else { ?>
+							<span style="color: red;">offline</span>
+						<?php } ?>
+					</span>
+					<br>
+					<img style="width: 80px;margin-top: -10px;" src="https://www.habbo.com.br/habbo-imaging/avatarimage?figure=<?=$friendinforow['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">
+				</div>
 				<?php } ?>
 			</div>
 		</div>
@@ -84,7 +88,7 @@ if (is_numeric(str_replace("/home/", "", parse_url($_SERVER["REQUEST_URI"], PHP_
 		<div class="row">
 			<div class="pil text-justify" style="height: 135px;">
 				<div class="pilhead" style="background-color: #F55D3E;">
-					<h3>Relaties van <?=userHome('username')?></h3>
+					<h3>RELATIONSHIPS OF <?=userHome('username')?></h3>
 				</div>
 				<?php
 				$getlove = $dbh->prepare("SELECT user_id, target, type FROM user_relationships WHERE type = '1' AND user_id = " . userHome('id') . " ORDER BY ID DESC LIMIT 1");
@@ -120,3 +124,4 @@ if (is_numeric(str_replace("/home/", "", parse_url($_SERVER["REQUEST_URI"], PHP_
 		</div>
 	</div>
 </div>
+<?php include_once('include/footer.php'); ?>
