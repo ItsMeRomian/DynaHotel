@@ -1,6 +1,6 @@
 .bigheader {
 	height: 230px;
-	background: url('../images/header2.png');
+	background: url('../images/header2.webp');
 	background-size: 100%;	
 }
 .headerbutton {
@@ -45,7 +45,7 @@ li.dropdown:hover > .dropdown-menu {
 .userview {
 	border: solid;
 	height: 200px;
-	background: url('../images/personal_info/hotel_views/backdrop.png');
+	background: url('../images/personal_info/hotel_views/backdrop.webp');
 	background-size:cover;
 	border-radius: 0px 0px 10px 10px;
 	}
@@ -88,7 +88,10 @@ margin-right: 5px;
 }
 /*end userview*/
 html, body {
-	background-color: #D8D8D8;
+	background-color: #eaffff!important;
+    background-image: url(../images/clouds2.webp);
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 .pil {
 	border-radius: 5px;
@@ -126,6 +129,13 @@ font-style: italic;
     width: 125px;
     margin-left: 12px;
     margin-right: 12px;
+    border-radius: 21px;
+    background-color: #c1c1c1;
+    color: white!important;
+}
+.lastuser > span > a {
+	color: white;
+	font-weight: bold;
 }
 /*end lastuser mmmm*/
 .footer {
