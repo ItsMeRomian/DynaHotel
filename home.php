@@ -63,14 +63,17 @@ if (is_numeric(str_replace("/home/", "", parse_url($_SERVER["REQUEST_URI"], PHP_
 				$getfriends = $dbh->prepare("SELECT user_two_id FROM messenger_friendships WHERE user_one_id = " . userHome('id') . " ORDER BY ID DESC LIMIT 5");
 				$getfriends->execute();
 				while ($friend = $getfriends->fetch()) { 
-					$friendinfo = $dbh->prepare("SELECT id, username, look FROM users WHERE id=" . $friend['user_two_id']);
+					$friendinfo = $dbh->prepare("SELECT id, username, look, online FROM users WHERE id=" . $friend['user_two_id']);
 					$friendinfo->execute();
 					$friendinforow = $friendinfo->fetch();
 					?>
 					<div class="lastuser">
-						<span><h5><a href="/home/<?=$friendinforow['id']?>"><?=$friendinforow['username']?></a></h5></span><br>
-						<img style="margin-top:-45px;"src="https://retroripper.com/habbo-imaging/avatarimage?figure=<?=$friendinforow['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">						
-						<br><span style="font-size: 13px;"><?=$room['users_now'] //FIX DIT?> online now</span>
+							<span>
+								<a href="/home/<?=$friendinforow['id']?>"><?=$friendinforow['username']?></a><br>
+								<?php if ($friendinforow['online']) { ?>
+									<span style="color: green;">online</span>
+									<?php } else { ?><span style="color: red;">offline</span><?php } ?></span><br>
+									<img style="width: 80px;margin-top: -10px;" src="https://retroripper.com/habbo-imaging/avatarimage?figure=<?=$friendinforow['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">
 					</div>
 				
 				<?php } ?>

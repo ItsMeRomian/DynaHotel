@@ -69,8 +69,11 @@ switch($rand) {
 					$getlastusers->execute();
 					while ($user = $getlastusers->fetch()) { ?>
 						<div class="lastuser">
-							<span><a href="/home/<?=$user['id']?>"><?=$user['username']?></a></span><br>
-							<img style="width: 80px;"src="https://retroripper.com/habbo-imaging/avatarimage?figure=<?=$user['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">
+							<span><a href="/home/<?=$user['id']?>"><?=$user['username']?></a><br>
+							<?php if ($friendinforow['online']) { ?>
+									<span style="color: green;">online</span>
+									<?php } else { ?><span style="color: red;">offline</span><?php } ?></span>
+							<img style="width: 80px;margin-top: -10px;" src="https://retroripper.com/habbo-imaging/avatarimage?figure=<?=$user['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">
 						</div>
 					
 					<?php } ?>
@@ -91,7 +94,7 @@ switch($rand) {
 						?>
 						<div class="lastuser">
 							<span><?=$room['caption']?></span><br>
-							<span style="font-size: 13px;">Gemaakt door <a href="/home/<?=$room['owner']?>"><?=$owner['username']?></a><br></span>
+							<span style="font-size: 13px;">Gemaakt door <br><a href="/home/<?=$room['owner']?>"><?=$owner['username']?></a><br></span>
 							<img style="width: 80px;"src="/swf/c_images/newroom/<?=$room['model_name']?>.png">
 							<br><span style="font-size: 13px;"><?=$room['users_now']?> online now</span>
 						</div>
