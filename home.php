@@ -55,7 +55,7 @@ if (is_numeric(str_replace("/home/", "", parse_url($_SERVER["REQUEST_URI"], PHP_
 			</div>
 		</div>
 		<div class="row">
-			<div class="pil text-justify" style="height: 200px;">
+			<div class="pil text-justify" >
 				<div class="pilhead" style="background-color: #FFA630;">
 					<h3>VRIENDEN VAN <?=userHome('username')?></h3>
 				</div>
@@ -120,3 +120,4 @@ if (is_numeric(str_replace("/home/", "", parse_url($_SERVER["REQUEST_URI"], PHP_
 		</div>
 	</div>
 </div>
+<?php include_once('include/footer.php'); ?>
