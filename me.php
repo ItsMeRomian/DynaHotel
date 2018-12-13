@@ -2,10 +2,10 @@
 $rand = rand(0,3);
 switch($rand) {
 	case 0:
-		$welcome = "Leuk je weer te zien {username}!";
+		$welcome = "Leuk je weer te zien, {username}!";
 		break;
 	case 1:
-		$welcome = "Welkom terug {username}!";
+		$welcome = "Welkom terug, {username}!";
 		break;
 	case 2:
 		$welcome = "Welkom, {username}!";
