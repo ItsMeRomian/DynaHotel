@@ -5,7 +5,7 @@ This theme is mostly in Dutch and does not use the predefined strings found in t
 
 ## What to change / How to install
 1. In staff.php, change itsmeromian, kazoo etc. to staff users of your own hotel. 
-2. wip
+2. Change `/system/app/plugin/habbooftheweek.php` to [this](https://pastebin.com/TYN0kzTa)
 
 ## Previews:
 
