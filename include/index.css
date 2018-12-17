@@ -3,8 +3,13 @@ html, body {
     background-image: url(../images/clouds2.webp);
     background-position: bottom;
     background-repeat: no-repeat;
-    height: 100%;
 }
+
+/*This fixes the scrollbars that show up for some reason*/
+html { height: 100%; }
+.row { margin-right: 0px; } 
+
+
 .wrap {
 	margin-top: 50px;
 }
