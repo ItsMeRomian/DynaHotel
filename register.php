@@ -4,6 +4,8 @@
 	<head>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="/templates/DynaHotel/include/index.css">
+		<link rel="icon" href="/templates/DynaHotel/images/interactive.ico" type="image/x-icon" />
+		<title>DynaHotel - Register</title>
 	</head>
 	<body class="text-center">
 		<form class="form-signin" style="max-width: 400px;"method="post">

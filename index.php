@@ -2,6 +2,8 @@
 	<head>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="/templates/DynaHotel/include/index.css">
+		<link rel="icon" href="/templates/DynaHotel/images/interactive.ico" type="image/x-icon" />
+		<title>DynaHotel - Login</title>
 	</head>
 	<body>
 		<div class="row wrap">
@@ -24,8 +26,7 @@
 					<p class="mt-5 mb-3 text-muted">&copy; DYNAHOTEL 2018, made with <3</p>
 				</form>
 			</div>
-						<div class="col-1"> </div>
-
+			<div class="col-1"> </div>
 			<div class="col-4 text-justify side pil">
 				<h2 class="pilhead">Welkom in Dyna!</h2>
 				<img src="templates/DynaHotel/images/security/franksplaca.gif" style="float: right;">
