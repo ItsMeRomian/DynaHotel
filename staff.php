@@ -6,7 +6,7 @@
 			<div class="pil text-justify">
 				<div class="pilhead" style="background-color: #F55D3E;">OWNER</div>
 				<div class="lastuser">
-					<a href="/home/1"><h3>ITSMEROMIAN</h3></a>
+					<span><a href="/home/1">ITSMEROMIAN</a></span>
 					<?php
 					$getlastusers = $dbh->prepare("SELECT username,look,id FROM users WHERE username = 'itsmeromian' LIMIT 1");
 					$getlastusers->execute();
@@ -21,7 +21,7 @@
 				<div class="pilhead" style="background-color: #F55D3E;">MODERATORS</div>
 				<div class="row">
 					<div class="lastuser">
-						<a href="/home/3"><h3>KAZOO</h3></a>
+					<span><a href="/home/3">KAZOO</a></span>
 						<?php
 						$getlastusers = $dbh->prepare("SELECT username,look,id FROM users WHERE username = 'kazoo' LIMIT 1");
 						$getlastusers->execute();
@@ -34,7 +34,7 @@
 				<hr>
 				<div class="row">
 					<div class="lastuser">
-						<a href="/home/8"><h3>LODDE</h3></a>
+					<span><a href="/home/8">LODDE</a></span>
 						<?php
 						$getlastusers = $dbh->prepare("SELECT username,look,id FROM users WHERE username = 'lodde' LIMIT 1");
 						$getlastusers->execute();
@@ -48,7 +48,7 @@
 			<div class="pil text-justify">
 				<div class="pilhead" style="background-color: #F55D3E;">HELPERS</div>
 				<div class="lastuser">
-					<h3>:(</h3>
+					<span><a >:(</a></span>
 					<?php
 					$getlastusers = $dbh->prepare("SELECT username,look,id FROM users WHERE username = '' LIMIT 1");
 					$getlastusers->execute();
