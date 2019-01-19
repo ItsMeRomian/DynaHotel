@@ -47,6 +47,13 @@
 				</div>
 				<div class="navbar-nav ml-auto">
 					<span class="nav-item nav-link ">{online} online</span>
+					<?php $user = $dbh->prepare("SELECT * FROM users WHERE id =" . $_SESSION['id']);
+						  $user->execute();
+						  $userrow = $user->fetch();
+						  if ($userrow["rank"] > 4) { ?>
+					<span class="nav-item nav-link modtoolsbutton"><a href="https://mods.dyna.host/">MODTOOLS »</a></span>
+						  <?php } ?>
+					
 				</div>
 			</div>
 		</nav>

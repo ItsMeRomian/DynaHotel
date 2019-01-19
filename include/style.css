@@ -130,7 +130,7 @@ font-style: italic;
     margin-left: 12px;
     margin-right: 12px;
     border-radius: 21px;
-    background-color: #c1c1c1;
+    background-color: #b0d8dc;
     color: white!important;
 }
 .lastuser > span > a {
@@ -156,3 +156,18 @@ h3 {
 .container {
 	padding-left: 0px;
 	padding-right: 0px;
+}
+.modtoolsbutton {
+	background-color: #bd2d2d;
+    border-radius: 10px;
+}
+.modtoolsbutton > a {
+	color: white!important;
+}
+.modtoolsbutton > a:hover {
+	color: white!important;
+	text-decoration: none;
+}
+.modtoolsbutton:hover {
+	background-color: #e83f3f;
+}
