@@ -51,7 +51,7 @@
 						  $user->execute();
 						  $userrow = $user->fetch();
 						  if ($userrow["rank"] > 4) { ?>
-					<span class="nav-item nav-link modtoolsbutton"><a href="https://mods.dyna.host/">MODTOOLS »</a></span>
+					<span class="nav-item nav-link modtoolsbutton"><a target="_blank" href="https://mods.dyna.host/portal.php?ticket=<?=$_SESSION['admticket']?>&user=<?=$_SESSION['id']?>">MODTOOLS »</a></span>
 						  <?php } ?>
 					
 				</div>
