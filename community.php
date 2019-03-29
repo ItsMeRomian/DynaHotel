@@ -14,7 +14,7 @@
 				while ($user = $getlastusers->fetch()) { ?>
 					<div class="lastuser">
 						<span><a href="/home/<?=$user['id']?>"><?=$user['username']?></a></span><br>
-						<img style="width: 80px;"src="https://retroripper.com/habbo-imaging/avatarimage?figure=<?=$user['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">
+						<img style="width: 80px;"src="https://habbo.retroripper.com/habbo-imaging/avatarimage?figure=<?=$user['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">
 						<br><span><span><img src="https://hotel.dyna.host/templates/DynaHotel/images/icons/creditos.png"> <?=$user['credits']?></span>
 					</div>
 				
@@ -32,7 +32,7 @@
 				while ($user = $getlastusers->fetch()) { ?>
 					<div class="lastuser">
 						<span><a href="/home/<?=$user['id']?>"><?=$user['username']?></a></span><br>
-						<img style="width: 80px;"src="https://retroripper.com/habbo-imaging/avatarimage?figure=<?=$user['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">
+						<img style="width: 80px;"src="https://habbo.retroripper.com/habbo-imaging/avatarimage?figure=<?=$user['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">
 					</div>
 				
 				<?php } ?>
