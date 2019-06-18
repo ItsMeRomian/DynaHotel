@@ -139,6 +139,7 @@ font-style: italic;
 }
 /*end lastuser mmmm*/
 .footer {
+	color: white;
 	background-color: gray;
 	height: 68px;
 	width: 100%;
