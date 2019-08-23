@@ -22,8 +22,8 @@ if (isset($_POST['go'])) {
 		</div>
 <?php }
 	else {
-		$user = $dbh->prepare("INSERT INTO staffapplication (username, userid, function, online, whoyouknow, date) VALUES 
-('" . $namerow['username'] . "', '" . $_SESSION['id'] . "', '" . $_POST['type'] . "', '" . $_POST['online'] . "', '" . $_POST['whoyouknow'] . "', '" . time() ."')");
+		$user = $dbh->prepare("INSERT INTO staffapplication (username, userid, function, online, whoyouknow, why, date) VALUES 
+('" . $namerow['username'] . "', '" . $_SESSION['id'] . "', '" . $_POST['type'] . "', '" . $_POST['online'] . "', '" . $_POST['whoyouknow'] . "', '" . $_POST['why'] . "', '" . time() ."')");
 		$user->execute();
 		?>
 		<br>
@@ -81,9 +81,9 @@ if (isset($_POST['go'])) {
 							</div>
 						</div>
 						<div class="form-group">
-						  <label class=" control-label" for="text">Waarom moeten we jou kiezen?</label>
+						  <label class=" control-label" for="why">Waarom moeten we jou kiezen?</label>
 						  <div class="">                     
-							<textarea required class="form-control" id="text" name="text"></textarea>
+							<textarea required class="form-control" id="text" name="why"></textarea>
 						  </div>
 						</div>
 						<div class="form-group">
