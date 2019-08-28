@@ -19,7 +19,7 @@ switch($rand) {
 		<div class="col">
 			<div class="userview">
 				<div class="user">
-					<img src="https://habbo.retroripper.com/habbo-imaging/avatarimage?figure={look}&direction=2&head_direction=3&action=std,wav&gesture=std">
+					<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?figure={look}&direction=2&head_direction=3&action=std,wav&gesture=std">
 				</div>
 				<div class="usertext">
 					<span class="title text-capitalize"><?=$welcome?></span><br>
@@ -73,7 +73,7 @@ switch($rand) {
 							<?php if ($friendinforow['online']) { ?>
 									<span style="color: green;">online</span>
 									<?php } else { ?><span style="color: red;">offline</span><?php } ?></span>
-							<img style="width: 80px;margin-top: -10px;" src="https://habbo.retroripper.com/habbo-imaging/avatarimage?figure=<?=$user['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">
+							<img style="width: 80px;margin-top: -10px;" src="https://www.habbo.com.br/habbo-imaging/avatarimage?figure=<?=$user['look']?>&direction=2&head_direction=3&action=std,wav&gesture=std">
 						</div>
 					
 					<?php } ?>
