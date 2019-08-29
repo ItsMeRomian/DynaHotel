@@ -48,7 +48,7 @@
 			<div class="pil text-justify">
 				<div class="pilhead" style="background-color: #F55D3E;">HELPERS</div>
 				<div class="lastuser">
-					<span><a >:(</a></span>
+					<span><a href="#">:(</a></span>
 					<?php
 					$getlastusers = $dbh->prepare("SELECT username,look,id FROM users WHERE username = '' LIMIT 1");
 					$getlastusers->execute();
@@ -63,11 +63,11 @@
 	<div class="col-4">
 		<div class="row">
 			<div class="pil text-justify">
-				<div class="pilhead" style="background-color: #56E39F;">OOK STAFF WORDEN?</div>
+				<div class="pilhead" style="background-color: #56E39F;">BECOME STAFF?</div>
 				<img style="float: right;"src="templates/DynaHotel/images/nieuws.gif">
 				<p>
-				Solisiteer en misschien word jij ook lit van ons prachtige team!<br>
-				Klik <a href="sollicitaties">hier</a> om te soliciteren.
+				Sollie now and maybe we'll recruit you! we're currently searching for a <b>Moderator</b>, <b>helper</b> and a <b>admin</b>.<br>
+				click <a href="sollicitaties">here</a> to sollie.
 				</p>
 			</div>
 		</div>

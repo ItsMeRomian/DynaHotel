@@ -18,45 +18,47 @@
 		<img class="logo" src="../templates/DynaHotel/images/logo2.webp">
 		</div>
 		<div class="headerbutton">
-			<button type="button" class="btn btn-success"><a class="link"href="../client">GA NAAR DYNA »</a></button>
-			<button type="button" class="btn btn-danger"><a class="link" href="../logout">LOG UIT »</a></button><br>
+			<button type="button" class="btn btn-success"><a class="link"href="../client">ENTER DYNA »</a></button>
+			<button type="button" class="btn btn-danger"><a class="link" href="../logout">LOG OUT »</a></button><br>
 		</div>
 	</div>
 	<div class="menuwrap">
-	<div class="container">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light"> 
-			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-				<div class="navbar-nav">
-					<li>
-						<a class="nav-link" href="../me">HOME</a>
-					</li>
-					<li>
-						<a class="nav-link" href="../home/{username}" >ACCOUNT</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link " href="../community" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">COMMUNITY</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="../community">COMMUNITY</a>
-							<a class="dropdown-item" href="../staff">STAFF</a>
-							<a class="dropdown-item" href="../sollicitaties">WORD STAFF</a>
-						</div>
-					</li>
-					<li>
-						<a class="nav-link" href="../buyvip">VIP</a>
-					</li>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<li>
+							<a class="nav-link" href="../me">HOME</a>
+						</li>
+						<li>
+							<a class="nav-link" href="../home/{username}" >ACCOUNT</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link " href="../community" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">COMMUNITY</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<a class="dropdown-item" href="../community">COMMUNITY</a>
+								<a class="dropdown-item" href="../staff">STAFF</a>
+								<a class="dropdown-item" href="../sollicitaties">BECOME STAFF</a>
+							</div>
+						</li>
+						<li>
+							<a class="nav-link" href="../buyvip">VIP</a>
+						</li>
+					</div>
+					<div class="navbar-nav ml-auto">
+						<span class="nav-item nav-link ">{online} online</span>
+						<?php 
+						//If user is mod, show a button to ModTools. portal.php will check if the user is logged in via a AuthTicket. \
+						//No double login required.
+						$user = $dbh->prepare("SELECT * FROM users WHERE id =" . $_SESSION['id']);
+						$user->execute();
+						$userrow = $user->fetch();
+						if ($userrow["rank"] > 4) { ?>
+						<span class="nav-item nav-link modtoolsbutton"><a target="_blank" href="https://mods.dyna.host/portal.php?ticket=<?=$_SESSION['admticket']?>&user=<?=$_SESSION['id']?>">MODTOOLS »</a></span>
+						<?php } ?>
+					</div>
 				</div>
-				<div class="navbar-nav ml-auto">
-					<span class="nav-item nav-link ">{online} online</span>
-					<?php $user = $dbh->prepare("SELECT * FROM users WHERE id =" . $_SESSION['id']);
-						  $user->execute();
-						  $userrow = $user->fetch();
-						  if ($userrow["rank"] > 4) { ?>
-					<span class="nav-item nav-link modtoolsbutton"><a target="_blank" href="https://mods.dyna.host/portal.php?ticket=<?=$_SESSION['admticket']?>&user=<?=$_SESSION['id']?>">MODTOOLS »</a></span>
-						  <?php } ?>
-					
-				</div>
-			</div>
-		</nav>
-	</div>
+			</nav>
+		</div>
 	</div>
 	<div class="container">

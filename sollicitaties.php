@@ -16,9 +16,10 @@ if (isset($_POST['go'])) {
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			</button>
-			<h5>Ohnee. </h5>
-			Je hebt blijkbaar al een keer gesolliciteerd. Omdat we denken dat je spammed, 
-			word je sollicitatie verwijderd en mag je niet meer solliciteren. Sorry. <br>Herhaling kan ervoor zorgen dat je gebanned word.
+			<h5>ohno. </h5>
+			You've already applied for this job. Because we think you're spamming,
+			your application will be deleted and further applications will be denied. Sorry. 
+			<br>Repeating this can result in a ban.
 		</div>
 <?php }
 	else {
@@ -31,8 +32,8 @@ if (isset($_POST['go'])) {
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			</button>
-			<h5>Dank. </h5>
-			Je sollie is binnen en we checken m in een week.
+			<h5>Thanks. </h5>
+			We'll check your application in a week.
 		</div>
 		<?php
 	}
@@ -43,7 +44,7 @@ if (isset($_POST['go'])) {
 	<div class="col-6">
 		<div class="row">
 			<div class="pil text-justify">
-				<div class="pilhead" style="background-color: #F55D3E;">SOLLICITEER</div>
+				<div class="pilhead" style="background-color: #F55D3E;">APPLY</div>
 				<form class="form-horizontal" action="sollicitaties" method="POST">>
 					<fieldset>
 						<div class="form-group">
@@ -53,7 +54,7 @@ if (isset($_POST['go'])) {
 							</div>
 						</div>
 						<div class="form-group">
-						  <label class=" control-label" for="type">Waarvoor solisiteer je?</label>
+						  <label class=" control-label" for="type">What are you applying for?</label>
 						  <div class="">
 							<select id="type" name="type" class="form-control">
 							  <option value="admin">Administrator</option>
@@ -63,11 +64,11 @@ if (isset($_POST['go'])) {
 						  </div>
 						</div>
 						<div class="form-group">
-						  <label class=" control-label" for="whoyouknow">Wie ken je al van het team?</label>
+						  <label class=" control-label" for="whoyouknow">Who do you know?</label>
 						  <div class="">
 							<select  id="whoyouknow" name="whoyouknow" class="form-control">
 							  <option value="0">--kies--</option>
-							  <option value="None">Niemand van deze lijst</option>
+							  <option value="None">No one</option>
 							  <option value="ItsMeRomian">ItsMeRomian</option>
 							  <option value="NietMarvin">NietMarvin</option>
 							  <option value="Lodde">Lodde</option>
@@ -75,22 +76,22 @@ if (isset($_POST['go'])) {
 						  </div>
 						</div>
 						<div class="form-group">
-							<label class=" control-label"  for="online">Hoeveel lessen kun je online zijn per dag?</label>  
+							<label class=" control-label"  for="online">How many lessons can you be online?</label>  
 							<div class="">
-							<input required id="online" name="online" type="number" placeholder="4" class="form-control input-md"  >
+							<input required id="online" name="online" type="number" placeholder="number" class="form-control input-md"  >
 							</div>
 						</div>
 						<div class="form-group">
-						  <label class=" control-label" for="why">Waarom moeten we jou kiezen?</label>
+						  <label class=" control-label" for="why">Why should we choose you? +-5 sentences</label>
 						  <div class="">                     
 							<textarea required class="form-control" id="text" name="why"></textarea>
 						  </div>
 						</div>
 						<div class="form-group">
-						  <label class=" control-label" for="airpods">Heb je airpods?</label>
+						  <label class=" control-label" for="airpods">Do you have airpods?</label>
 						  <div class="">                     
-							<input type="radio" name="a" value="x"> Ja<br>
-							<input type="radio" name="a" value="x"> Nee<br>
+							<input type="radio" name="a" value="x"> Yes<br>
+							<input type="radio" name="a" value="x"> No<br>
 						  </div>
 						</div>
 						<button class="btn btn-large btn-success " type="submit" name="go">HUTS</button>					
@@ -101,16 +102,16 @@ if (isset($_POST['go'])) {
 	</div>
 	<div class="col-6">
 		<div class="pil text-justify">
-			<div class="pilhead text-right text-uppercase" style="background-color: #F55D3E; padding-right: 12px;">Join ons team </div>
-			We zoeken nog mensen die ons autistische team willen versterken. wat een kans om iets te berijken in je leven!<br><br>
-			Wat we van je verwachten:<br>
+			<div class="pilhead text-left text-uppercase" style="background-color: #56E39F; padding-right: 12px;">Join our team!</div>
+			We're searching people to make our team better. Do you think you can help us?<br><br>
+			What we expect from you:<br>
 			<ul>
-				<li>Een beetje profesionaliteit</li>
-				<li>Dat je een van onze teamleden al kent</li>
-				<li>Dat je veel online kan zijn</li>
-				<li>Dat je airpods hebt want we willen geen broke bobbas in ons team.</li>
+				<li>Professionality</li>
+				<li>That you know someone from the team already</li>
+				<li>That you can be online for more than 3 lessons a day</li>
+				<li>That you have airpods</li>
 			</ul>
-			We beoordelen op chatlogs, onlinetijd, hoe je bent tegen spelers en of je n beetje cool bent.
+			You wil be judged on chatlogs and your past onlinetime.
 		</div>
 	</div>
 </div>

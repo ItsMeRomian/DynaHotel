@@ -4,7 +4,7 @@
 	<div class="col">
 		<div class="row">
 			<div class="pil text-justify">
-				<div class="pilhead" style="background-color: #F55D3E;">KOOP VIP</div>
+				<div class="pilhead" style="background-color: #F55D3E;">BUY VIP</div>
 				wip
 			</div>
 			

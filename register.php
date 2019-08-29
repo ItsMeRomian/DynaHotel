@@ -16,10 +16,10 @@
 						<?php User::Register(); ?><br>
 					</div>
 					<?php } ?>
-					<input type="username" id="username" name="username" class="form-control" placeholder="Je gebruikersnaam" autofocus>
-					<input type="username" id="email" name="email" class="form-control" placeholder="Je Email" >
-					<input type="password" name="password" id="password" class="form-control" placeholder="Je wachtwoord">
-					<input type="password" name="password_repeat" id="password" class="form-control" placeholder="Nog een keer je wachtwoord dankje ahaha">
+					<input type="username" id="username" name="username" class="form-control" placeholder="Your username" autofocus>
+					<input type="username" id="email" name="email" class="form-control" placeholder="Your email" >
+					<input type="password" name="password" id="password" class="form-control" placeholder="Your password">
+					<input type="password" name="password_repeat" id="password" class="form-control" placeholder="your password (again)">
 					<button class="btn btn-lg btn-success btn-block" type="submit" name="register">REGISTER</button>
 					<p class="mt-5 mb-3 text-muted">&copy; DYNAHOTEL 2018</p>
 				</form>

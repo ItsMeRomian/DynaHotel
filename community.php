@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="pil text-justify" style="height: 250px;">
 				<div class="pilhead" style="background-color: #F55D3E;">
-					RIJKSTE STRIJDERS
+					RICHEST DYNA'S
 				</div>
 				<?php
 				$getlastusers = $dbh->prepare("SELECT username,look,id,credits FROM users ORDER BY credits DESC LIMIT 5");
@@ -24,7 +24,7 @@
 		<div class="row">
 			<div class="pil text-justify" style="height: 250px;">
 				<div class="pilhead" style="background-color: #FFA630;">
-					NIEUWSTE ACCOUNTS
+					NEWEST ACCOUNTS
 				</div>
 				<?php
 				$getlastusers = $dbh->prepare("SELECT username,look,id FROM users ORDER BY ID DESC LIMIT 5");
@@ -43,7 +43,7 @@
 		<div class="row">
 			<div class=" pil text-justify">
 				<div class="pilhead">
-					DYNA VAN DE WEEK
+					DYNA OF THE WEEK
 				</div>
 				<?=userOfTheWeek()?>
 			</div>
